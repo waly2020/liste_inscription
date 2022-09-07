@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Inscription</title>
+</head>
+
+<body>
+    <div class="contener">
+        <h1>Liste d'Inscription</h1>
+        <div class="forms">
+            <h2>Formulaire</h2>
+            <div class="contener_forms">
+                <form class="form1 active">
+                    <h2>Eleves</h2>
+                    <input data-input="nom" class="input" type="text" id="name" placeholder="Nom">
+                    <input data-input="prenom" class="input" type="text" id="prenom" placeholder="prenom">
+                    <select data-input="sexe" class="input" name="sexe" id="sexe">
+                        <option value="Homme">Homme</option>
+                        <option value="Femme">Femme</option>
+                    </select>
+                    <input data-input="date" class="input" type="date" id="datnais">
+                    <select data-input="classe" class="input" name="classe" id="classe">
+                        <option value="CP1">6 EME</option>
+                        <option value="CP1">5 EME</option>
+                        <option value="CE1">4 EME</option>
+                        <option value="CM1">3 EME</option>
+                        <option value="CM1">2 ND</option>
+                        <option value="CM1">1 TL</option>
+                        <option value="CM1">TL</option>
+                    </select>
+                    <input data-input="lieux" class="input" type="text" id="lieux" placeholder="Lieux de naissance">
+
+                </form>
+                <form class="form2">
+                    <h2>Tuteur</h2>
+                    <input class="input" data-input="pNom" type="text" id="name" placeholder="Nom">
+                    <input class="input" data-input="pPrenom" type="text" id="prenom" placeholder="prenom">
+                    <input class="input" data-input="pNum" type="tel" id="prenom" placeholder="numero de telephone">
+                </form>
+                <div class="btns">
+                    <button class="toggle"></button>
+                    <button class="submit">Inscrire</button>
+                </div>
+            </div>
+        </div>
+        <div class="liste">
+            <h2>liste</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prenom</th>
+                        <th scope="col">Sexe</th>
+                        <th scope="col">Classe</th>
+                        <th scope="col">Lieux de naiss.</th>
+                        <th scope="col">Nom tut.</th>
+                        <th scope="col">Prenom tut.</th>
+                        <th scope="col">Numero tel.</th>
+                    </tr>
+                </thead>
+                <tbody id="liste">
+                    <!-- <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Pierre</td>
+                        <td>Homme</td>
+                        <td>Libreville</td>
+                        <td>CM2</td>
+                        <td>Pierre</td>
+                        <td>Jean</td>
+                        <td>05555555</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/stepForm.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

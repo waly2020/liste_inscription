@@ -1,0 +1,155 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+.contener {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 80px 1fr;
+
+    h1 {
+        grid-column: 1 / span 2;
+        display: block;
+        margin: auto;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 30px 0;
+    }
+}
+
+.forms {
+
+    .contener_forms {
+        position: relative;
+        width: 450px;
+        min-height: 450px;
+        margin: auto;
+        overflow: hidden;
+        box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.055);
+        border-radius: 3px;
+
+        &>* {
+            position: absolute;
+        }
+
+        form {
+            width: 100%;
+            height: calc(100% - 60px);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, 50px);
+            gap: 10px;
+            padding: 10px;
+            transition: .5s;
+
+            &.active {
+                transform: translateX(0px);
+            }
+
+            h2 {
+                grid-column: 1 / span 2;
+                margin: auto;
+            }
+
+            input,
+            select {
+                padding: 0 10px;
+                border: none;
+                background: none;
+                background: rgba(0, 0, 0, 0.067);
+                border-bottom: solid 3px royalblue;
+            }
+        }
+
+
+        .form1 {
+            transform: translateX(-100%);
+
+            #name {
+                grid-column: 1 / span 2;
+            }
+
+            #prenom {
+                grid-column: 1 / span 2;
+            }
+        }
+
+        .form2 {
+            transform: translateX(100%);
+
+            input {
+                grid-column: 1 / span 2;
+            }
+        }
+
+        .btns {
+            width: 100%;
+            height: 60px;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                width: 100px;
+                margin: 0 10px;
+                padding: 10px 30px;
+                background: none;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                outline: none;
+
+                &:hover {
+                    box-shadow: 0 0 1px 3px rgba(2, 137, 94, 0.2);
+                }
+
+                cursor: pointer;
+            }
+
+            .toggle {
+                background: royalblue;
+
+                &::after {
+                    content: "Suivant";
+                }
+
+                &.active::after {
+                    content: "Retour";
+                }
+            }
+
+            .submit {
+                background-color: #aaa;
+
+                &.active {
+                    background: rgb(0, 182, 0);
+                }
+            }
+
+        }
+    }
+
+}
+
+.liste {
+    padding: 0 40px;
+    overflow: auto;
+}
